@@ -43,4 +43,4 @@ for submission in subreddit.new(limit=1):
         if status:            
             print(status)
 else:
-    print('No new news.')
+    print('No updates.')
