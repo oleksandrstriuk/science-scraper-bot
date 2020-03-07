@@ -2,19 +2,22 @@ import telegram
 import telebot
 import praw
 
-bot_token = 'XXXXXXXXXXXXXXXXXXXXXXXXX'
+# set your Telegram data
+bot_token = '<insert your token here>'
 bot_chatID = '@your_channel_name'
-bot = telebot.TeleBot('XXXXXXXXXXXXXXXXXXXXXXXXX')
+bot = telebot.TeleBot('<insert your token here>')
 
-reddit = praw.Reddit(client_id='XXXXXXXXXXXXXX', \
-                     client_secret='XXXXXXXXXXXXXXXXXXXXXXXX', \
-                     user_agent='your_bot_name', \
-                     username='your_reddit_username', \
-                     password='XXXXXXXXXXXXXX')
+# set your Reddit data, use the link --> https://www.reddit.com/prefs/apps
+reddit = praw.Reddit(client_id='<PERSONAL_USE_SCRIPT_14_CHARS>', \
+                     client_secret='<SECRET_KEY_27_CHARS>', \
+                     user_agent='<YOUR_APP_NAME>', \
+                     username='<YOUR_REDDIT_USERNAME>', \
+                     password='<YOUR_REDDIT_LOGIN_PASSWORD>')
+# ^ don't forget to remove the greater-than and less-than signs <>
 
 def reddit_scraper(submission):
     news_data = []
-    subreddit = reddit.subreddit('name_of_subreddit')
+    subreddit = reddit.subreddit('<name_of_subreddit>')
     new_subreddit = subreddit.new(limit=500)
     for submission in subreddit.new(limit=5):
         data = {}
@@ -33,7 +36,7 @@ def get_msg(news_data):
         
     return msg
 
-subreddit = reddit.subreddit('name_of_subreddit')
+subreddit = reddit.subreddit('<name_of_subreddit>')
 new_subreddit = subreddit.new(limit=500)
 for submission in subreddit.new(limit=1):
     news_data = reddit_scraper(submission)
