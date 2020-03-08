@@ -37,7 +37,7 @@ def get_msg(news_data):
     return msg
 
 subreddit = reddit.subreddit('<name_of_subreddit>')
-new_subreddit = subreddit.new(limit=500)
+new_subreddit = subreddit.new
 for submission in subreddit.new(limit=1):
     news_data = reddit_scraper(submission)
     if len(news_data) > 0:
