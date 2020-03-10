@@ -6,9 +6,9 @@ Basically this is the simplest algorithm that allows extracting results from one
 
 # Modules to Install
 
-* import telegram
-* import telebot
-* import praw
+* telegram
+* telebot
+* praw
 
 # Manuals
 
