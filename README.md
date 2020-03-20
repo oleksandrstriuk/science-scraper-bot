@@ -15,3 +15,7 @@ Basically this is the simplest algorithm that allows extracting results from one
 * https://core.telegram.org/bots — instructions for creating and deploying bots
 * https://praw.readthedocs.io/en/stable/index.html — PRAW documentation (The Python Reddit API Wrapper)
 * https://www.reddit.com/prefs/apps — how to create Reddit Application (+ API usage guidelines)
+
+# Working Prototype
+
+https://t.me/top_science_headlines
