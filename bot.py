@@ -2,12 +2,12 @@ import telegram
 import telebot
 import praw
 
-# set your Telegram data
+# Insert your credentials and set Telegram data
 bot_token = '<insert your token here>'
 bot_chatID = '@your_channel_name'
 bot = telebot.TeleBot('<insert your token here>')
 
-# set your Reddit data, use the link --> https://www.reddit.com/prefs/apps
+# Set your Reddit data, use the link --> https://www.reddit.com/prefs/apps
 reddit = praw.Reddit(client_id='<PERSONAL_USE_SCRIPT_14_CHARS>', \
                      client_secret='<SECRET_KEY_27_CHARS>', \
                      user_agent='<YOUR_APP_NAME>', \
@@ -16,6 +16,7 @@ reddit = praw.Reddit(client_id='<PERSONAL_USE_SCRIPT_14_CHARS>', \
 # ^ don't forget to remove the greater-than and less-than signs <>
 
 def reddit_scraper(submission):
+    """Scrape data (title and URL) from the subreddit page."""  
     news_data = []
     subreddit = reddit.subreddit('<name_of_subreddit>')
     new_subreddit = subreddit.new(limit=500)
@@ -27,6 +28,8 @@ def reddit_scraper(submission):
     return news_data
 
 def get_msg(news_data):
+    """Format the output and get the message."""
+    
     msg = '\n\n\n'
     for news_item in news_data:
         title = news_item['title']
