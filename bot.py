@@ -16,7 +16,8 @@ reddit = praw.Reddit(client_id='<PERSONAL_USE_SCRIPT_14_CHARS>', \
 # ^ don't forget to remove the greater-than and less-than signs <>
 
 def reddit_scraper(submission):
-    """Scrape data (title and URL) from the subreddit page."""  
+    """Scrape data (title and URL) from the subreddit page."""
+    
     news_data = []
     subreddit = reddit.subreddit('<name_of_subreddit>')
     new_subreddit = subreddit.new(limit=500)
