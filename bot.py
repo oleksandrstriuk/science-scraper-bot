@@ -17,7 +17,6 @@ reddit = praw.Reddit(client_id='<PERSONAL_USE_SCRIPT_14_CHARS>', \
 
 def reddit_scraper(submission):
     """Scrape data (title and URL) from the subreddit page."""
-    
     news_data = []
     subreddit = reddit.subreddit('<name_of_subreddit>')
     new_subreddit = subreddit.new(limit=500)
@@ -30,7 +29,6 @@ def reddit_scraper(submission):
 
 def get_msg(news_data):
     """Format the output and get the message."""
-    
     msg = '\n\n\n'
     for news_item in news_data:
         title = news_item['title']
