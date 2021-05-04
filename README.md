@@ -1,6 +1,6 @@
 # Description
 
-This script is a realization of the idea of scraping scientific news from the “Science” Subreddit and broadcasting them via a telegram bot into a telegram channel. Initially, I've constructed two simple code fragments in Python for each of these tasks, but then I decided to combine them in one solid block of code so that the bot can automatically send the info that has been scrapped to the channel each time the program is executed. 
+This script is a realization of the idea of scraping scientific news from the “Science” Subreddit and broadcasting them via a telegram bot into a telegram channel. Initially, I've constructed two simple code fragments in Python for each of these tasks, but then I decided to combine them in one solid block of code so that the bot can automatically send the info that has been scraped to the channel each time the program is executed. 
 
 Basically this is the simplest algorithm that allows extracting results from one block of code (Reddit Scraper) into another (Posting Telegram Bot).
 
